@@ -21,9 +21,11 @@
  **********************************************************************/
 "use strict";
 
+var request = require('request');
 var sqlite3 = require('sqlite3');
 var crypto = require('crypto');
 var chrome = require('chrome-cookies-secure');
+// var exec = require('child_proccess').exec;
 
 this.cookie = {
     /**
@@ -61,8 +63,31 @@ this.cookie = {
      */
     getCookie: function(domain, callback) {
         "use strict";
+        /**
+         * get cookie
+         */
         chrome.getCookies(domain, function(err, cookies) {
             callback(cookies);
         });
+    },
+
+    /**
+     * [storeData: post to store data of specifical cookies]
+     * @param  {[type]}   postUrl  [the url to post]
+     * @param  {[type]}   postData [the data to post]
+     * @param  {Function} callback [the callback function]
+     * @return {[type]}            [description]
+     */
+    storeData: function(postUrl, postData, callback) {
+        "use strict";
+        /**
+         * callback is null by default
+         */
+        callback = callback || null;
+
+        /**
+         * [request to post]
+         */
+        request.post(postUrl).form(postData);
     }
 }
