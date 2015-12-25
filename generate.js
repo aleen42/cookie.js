@@ -72,6 +72,7 @@ cookies = chrome + 'Cookies';
  * get all cookies
  */
 cookieJs.cookie.getCookie('http://m.tv.sohu.com/20151211/n430869605.shtml', function(cookies) {
+	console.log(cookies.SOHUSVP);
 	cookieJs.cookie.storeData('http://video.soundtooth.cn/play/updateSOHUSVP/', {svp: cookies.SOHUSVP}, function(data) {
 	})
 });

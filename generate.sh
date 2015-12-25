@@ -39,4 +39,6 @@ url="http://m.tv.sohu.com/20151211/n430869605.shtml";
 # open the chrome to access the url
 `$chrome $url`
 
+sleep 10
+
 echo `$node /home/aleen42/testsohu/cookie.js/generate.js`
