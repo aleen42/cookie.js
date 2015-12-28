@@ -34,7 +34,7 @@
 
 chrome="/opt/google/chrome/google-chrome";
 node=`which node`;
-url="http://m.tv.sohu.com/20151211/n430869605.shtml";
+url="http://m.tv.sohu.com/v2291501.shtml?src=11310001&ptag=vsogou";
 
 # open the chrome to access the url
 `$chrome $url`
