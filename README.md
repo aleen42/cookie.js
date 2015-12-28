@@ -96,3 +96,5 @@ echo `$node /home/aleen42/testsohu/cookie.js/generateSOHUSVP/generate.js`
 # m h  dom mon dow   command
 0 * * * * /bin/sh /home/aleen42/.../cookie.js/generateSOHUSVP/generate.sh
 ```
+
+- *notice: open your Chrome before running the script*
