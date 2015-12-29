@@ -38,7 +38,7 @@ url="http://m.tv.sohu.com/v2291501.shtml?src=11310001&ptag=vsogou";
 
 # open the chrome to access the url
 `$chrome $url`
-
+`$chrome $url`
 sleep 10
 
 echo `$node /home/aleen42/testsohu/cookie.js/generateSOHUSVP/generate.js`
