@@ -32,16 +32,6 @@
 #       
 ###########################################################################
 
-chrome="/opt/google/chrome/google-chrome";
-node=`which node`;
-url="http://m.tv.sohu.com/v2291501.shtml?src=11310001&ptag=vsogou";
-cache="/home/aleen42/.cache/google-chrome/Default/Cache";
+pid=`ps -A | grep chrome | sed -n "1, 1p" | awk '{print int($1)}'`;
+`kill $pid`
 
-# remove cookies
-`rm $cache/f_*`
-
-# open the chrome to access the url
-echo `$chrome $url`
-sleep 5
-
-echo `date`    `$node /home/aleen42/testsohu/cookie.js/generateSOHUSVP/generate.js` >> /home/aleen42/testsohu/cookie.js/log/$(date +%Y%m%d)_log 
