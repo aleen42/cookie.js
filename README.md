@@ -94,7 +94,8 @@ echo `$node /home/aleen42/testsohu/cookie.js/generateSOHUSVP/generate.js`
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
-0 * * * * /bin/sh /home/aleen42/.../cookie.js/generateSOHUSVP/generate.sh
+29 * * * * export DISPLAY=:0 && google-chrome
+30 * * * * export DISPLAY=:0 && /bin/sh /home/aleen42/testsohu/cookie.js/generateSOHUSVP/generate.sh >> /home/aleen42/testsohu/cookie.js/log/output.log 2>&1 && /bin/sh /home/aleen42/testsohu/cookie.js/killChrome.sh >> /home/aleen42/testsohu/cookie.js/log/output.log 2>&1
 ```
 
 - *notice: open your Chrome before running the script*
