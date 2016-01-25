@@ -42,6 +42,6 @@ cache="/home/aleen42/.cache/google-chrome/Default/Cache";
 
 # open the chrome to access the url
 echo `$chrome $url`
-sleep 5
+sleep 20
 
 echo `date`    `$node /home/aleen42/testsohu/cookie.js/generateSOHUSVP/generate.js` >> /home/aleen42/testsohu/cookie.js/log/$(date +%Y%m%d)_log 
