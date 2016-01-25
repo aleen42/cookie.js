@@ -32,10 +32,11 @@
 #       
 ###########################################################################
 
-chrome="/opt/google/chrome/google-chrome";
+userName="chrome"
+chrome="/opt/$userName/chrome/google-chrome";
 node=`which node`;
 url="http://m.tv.sohu.com/v2291501.shtml?src=11310001&ptag=vsogou";
-cache="/home/aleen42/.cache/google-chrome/Default/Cache";
+cache="/home/$userName/.cache/google-chrome/Default/Cache";
 
 # remove cookies
 `rm $cache/f_*`
@@ -44,4 +45,4 @@ cache="/home/aleen42/.cache/google-chrome/Default/Cache";
 echo `$chrome $url`
 sleep 20
 
-echo `date`    `$node /home/aleen42/testsohu/cookie.js/generateSOHUSVP/generate.js` >> /home/aleen42/testsohu/cookie.js/log/$(date +%Y%m%d)_log 
+echo `date`    `$node /home/$userName/testsohu/cookie.js/generateSOHUSVP/generate.js` >> /home/$userName/testsohu/cookie.js/log/$(date +%Y%m%d)_log 

@@ -56,9 +56,16 @@ var chrome = '';
 var cookies = '';
 
 /**
+ * [userName: the user name of the Linux system]
+ * @type {String}
+ */
+var userName = 'chrome'
+
+/**
  * for Linux
  */
-home = '/home/aleen42/';
+
+home = '/home/' + userName + '/';
 chrome = home + '.config/google-chrome/Default/';
 cookies = chrome + 'Cookies';
 
