@@ -32,7 +32,7 @@
 #       
 ###########################################################################
 
-userName="chrome"
+userName="aleen42"
 chrome="/opt/$userName/chrome/google-chrome";
 node=`which node`;
 url="http://m.tv.sohu.com/v2291501.shtml?src=11310001&ptag=vsogou";
